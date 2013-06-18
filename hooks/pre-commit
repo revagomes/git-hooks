@@ -27,7 +27,7 @@ then
       if [ $result_for_file -eq 0 ]
       then
         LINE=`git grep -n $keyword $FILE | awk -F ":" '{print $2}'`
-        echo "#\t\033[31m$FILE\033[0m contains $keyword at line \033[33m$LINE\033[0m."
+        echo "$FILE contains $keyword at line $LINE."
       fi
     done
   done
